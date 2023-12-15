@@ -9,12 +9,12 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="alright",
-    version="2.2",
+    version="2.61",
     description="Python wrapper for WhatsApp web based on selenium",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Kalebu/alright",
-    download_url="https://github.com/Kalebu/alright/archive/refs/tags/v1.4.tar.gz",
+    download_url="https://github.com/Kalebu/alright/archive/refs/tags/v1.7.tar.gz",
     author="Jordan Kalebu",
     author_email="isaackeinstein@gmail.com",
     license="MIT",
@@ -27,10 +27,11 @@ setup(
         "python-whatsapp-wrapper",
     ],
     install_requires=[
+        "platformdirs",
         "selenium",
         "webdriver-manager",
     ],
-    include_package_data=True,
+    include_package_data=False,
     python_requires=">=3.6",
     classifiers=[
         "Development Status :: 3 - Alpha",
