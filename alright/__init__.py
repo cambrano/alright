@@ -350,6 +350,8 @@ class WhatsApp(object):
                 (By.XPATH, '//*[@id="main"]//*[@data-icon="msg-time"]')
             )
         )
+        
+        time.sleep(1)
 
         sendButton = self.wait.until(
             EC.presence_of_element_located(
@@ -371,6 +373,7 @@ class WhatsApp(object):
         """
         try:
             filename = os.path.realpath(picture)
+            print(filename)
             self.find_attachment()
             # To send an Image
             imgButton = self.wait.until(
